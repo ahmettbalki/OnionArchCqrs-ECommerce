@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
 namespace Core.Persistence.Extensions;
-
 public static class IQueryablePaginateExtensions
 {
     public static async Task<Paginate<T>> ToPaginateAsync<T>(
@@ -11,7 +9,7 @@ public static class IQueryablePaginateExtensions
         CancellationToken cancellationToken = default
     )
     {
-      
+
         List<T> items = await source.Skip(index * size).Take(size + 1).ToListAsync(cancellationToken);
 
         int count = items.Count > size ? items.Count + index * size : items.Count;
