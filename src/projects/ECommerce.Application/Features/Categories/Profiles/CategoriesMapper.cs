@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Core.Persistence.Extensions;
 using ECommerce.Application.Features.Categories.Commands.Create;
+using ECommerce.Application.Features.Categories.Queries.GetById;
 using ECommerce.Application.Features.Categories.Queries.GetList;
 using ECommerce.Application.Features.Categories.Queries.GetListByPaginate;
 using ECommerce.Domain.Entities;
@@ -14,5 +15,6 @@ public class CategoriesMapper : Profile
         CreateMap<Category, GetListCategoryResponseDto>();
         CreateMap<Category, GetListByPaginateCategoryResponseDto>();
         CreateMap<Paginate<Category>, Paginate<GetListByPaginateCategoryResponseDto>>();
+        CreateMap<Category, GetByIdCategoryResponseDto>();
     }
 }
