@@ -3,9 +3,9 @@ using ECommerce.Application.Services.Repositories;
 using ECommerce.Domain.Entities;
 using ECommerce.Persistence.Contexts;
 namespace ECommerce.Persistence.Concretes;
-public class CategoryRepository : EfRepositoryBase<Category, int, BaseDbContext> , ICategoryRepository
+public class ProductRepository : EfRepositoryBase<Product, Guid, BaseDbContext>, IProductRepository
 {
-    public CategoryRepository(BaseDbContext context) : base(context)
+    public ProductRepository(BaseDbContext context) : base(context)
     {
     }
 }

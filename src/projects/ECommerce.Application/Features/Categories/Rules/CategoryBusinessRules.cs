@@ -1,6 +1,6 @@
 ﻿using Core.CrossCuttingConcerns.Exceptions.ExceptionTypes;
 using ECommerce.Application.Features.Categories.Constants;
-using ECommerce.Persistence.Abstracts;
+using ECommerce.Application.Services.Repositories;
 using System.Threading;
 namespace ECommerce.Application.Features.Categories.Rules;
 public class CategoryBusinessRules(ICategoryRepository categoryRepository)

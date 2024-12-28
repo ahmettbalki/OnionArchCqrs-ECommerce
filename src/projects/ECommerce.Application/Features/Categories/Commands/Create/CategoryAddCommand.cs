@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ECommerce.Application.Features.Categories.Rules;
 using ECommerce.Domain.Entities;
-using ECommerce.Persistence.Abstracts;
+using ECommerce.Application.Services.Repositories;
 using MediatR;
 namespace ECommerce.Application.Features.Categories.Commands.Create;
 public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>
