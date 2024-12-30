@@ -7,7 +7,6 @@ public class BaseDbContext : DbContext
 {
     public BaseDbContext(DbContextOptions<BaseDbContext> opt): base(opt)
     {
-        
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -25,5 +24,4 @@ public class BaseDbContext : DbContext
     DbSet<ProductTag> ProductTags { get; set; }
     DbSet<OperationClaim> OperationClaims { get; set; }
     DbSet<UserOperationClaim> UserOperationClaims { get; set; }
-
 }
