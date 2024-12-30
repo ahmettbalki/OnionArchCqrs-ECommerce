@@ -42,9 +42,9 @@ public class AppUserConfguration : IEntityTypeConfiguration<AppUser>
         AppUser adminUser = new()
         {
             Id = 1,
-            FirstName = "Murat Ateş",
-            LastName = "En iyi Developer",
-            Email = "gayet_yeterli_bir_tanıtım@gmail.com",
+            FirstName = "Ahmet Balkı",
+            LastName = "Software Developer",
+            Email = "ahmettbalki@gmail.com",
             PasswordHash = passwordHash,
             PasswordSalt = passwordSalt,
             Status = true,
