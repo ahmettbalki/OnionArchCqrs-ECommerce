@@ -17,12 +17,8 @@ public sealed class UserBusinessRules
         Configuration = configuration;
         const string sectionOfRules = "UserAddRule";
         const string sectionOfRuleMessages = "UserAddRuleMessage";
-
-
         _userAddRule = Configuration.GetSection(sectionOfRules).Get<UserAddRule>();
         _userAddRuleMessage = Configuration.GetSection(sectionOfRuleMessages).Get<UserAddRuleMessage>();
-
-
         _userRepository = userRepository;
     }
     public async Task UserEmailShouldNotExistsWhenInserted(string email)
