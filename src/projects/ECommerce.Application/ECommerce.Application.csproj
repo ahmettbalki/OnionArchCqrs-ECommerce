@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Categories\Commands\Update\" />
+    <Folder Include="Features\Products\Constants\" />
   </ItemGroup>
 
   <ItemGroup>
