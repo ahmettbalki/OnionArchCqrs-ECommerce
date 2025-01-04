@@ -4,17 +4,19 @@ using Core.Security.JWT;
 using ECommerce.Application;
 using ECommerce.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Core.ElasticSearch;
+using Ecommerce.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-
 builder.Services.AddControllers();
-
+builder.Services.AddStackExchangeRedisCache(opt => opt.Configuration = "localhost:6381");
 builder.Services.AddSecurityServices();
 builder.Services.AddApplicationServiceDependencies();
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddInfrastructureDependencies(builder.Configuration);
+builder.Services.AddElasticSearch(builder.Configuration);
 
 const string tokenOptionsConfigurationName = "TokenOptions";
 TokenOptions tokenOptions = builder.Configuration.GetSection(tokenOptionsConfigurationName).Get<TokenOptions>()

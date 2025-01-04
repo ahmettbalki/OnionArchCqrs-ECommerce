@@ -8,7 +8,7 @@ using ECommerce.Application.Features.Products.Commands.Create;
 using ECommerce.Application.Services.Repositories;
 using MediatR;
 namespace ECommerce.Application.Features.Products.Commands.Delete;
-internal class ProductDeleteCommand : IRequest<string>,
+public class ProductDeleteCommand : IRequest<string>,
     ICacheRemoverRequest,
     ILoggableRequest,
     ISecuredRequest,

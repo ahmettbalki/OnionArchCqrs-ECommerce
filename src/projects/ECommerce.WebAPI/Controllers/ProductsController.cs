@@ -1,7 +1,12 @@
 ﻿using ECommerce.Application.Features.Products.Commands.Create;
+using ECommerce.Application.Features.Products.Commands.Update;
+using ECommerce.Application.Features.Products.Commands.Delete;
 using ECommerce.Application.Features.Products.Queries.GetList;
+using ECommerce.Application.Features.Products.Queries.GetListByImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using ECommerce.Application.Features.Products.Queries.GetListByElasticSearch;
+using ECommerce.Application.Features.Products.Queries.GetListFilterByElasticSearch;
 namespace ECommerce.WebAPI.Controllers;
 [Route("api/[controller]")]
 [ApiController]

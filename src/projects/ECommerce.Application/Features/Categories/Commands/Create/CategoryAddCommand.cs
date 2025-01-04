@@ -3,11 +3,11 @@ using ECommerce.Application.Features.Categories.Rules;
 using ECommerce.Domain.Entities;
 using ECommerce.Application.Services.Repositories;
 using MediatR;
-using Core.Application.Pipelines.Login;
 using Core.Application.Pipelines.Authorization;
 using Core.Security.Constants;
+using Core.Application.Pipelines.Logging;
 namespace ECommerce.Application.Features.Categories.Commands.Create;
-public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>, ISecuredRequest
+public sealed class CategoryAddCommand : IRequest<CategoryAddedResponseDto>, ILoggableRequest, ISecuredRequest
 {
     public string Name { get; set; }
 

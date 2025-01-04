@@ -2,6 +2,7 @@
 using Core.Application.Pipelines.Caching;
 using Core.Application.Pipelines.Logging;
 using Core.Application.Pipelines.Transaction;
+using Core.ElasticSearch.Services.Abstracts;
 using ECommerce.Application.Features.Products.Rules;
 using ECommerce.Application.Services.Repositories;
 using ECommerce.Domain.Entities;

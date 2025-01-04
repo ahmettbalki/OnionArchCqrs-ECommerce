@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using ECommerce.Application.Features.Products.Commands.Create;
+using ECommerce.Application.Features.Products.Commands.Update;
 using ECommerce.Application.Features.Products.Queries.GetList;
+using ECommerce.Application.Features.Products.Queries.GetListByImages;
 using ECommerce.Domain.Entities;
 namespace ECommerce.Application.Features.Products.Profiles;
 public class ProductMapping : Profile
