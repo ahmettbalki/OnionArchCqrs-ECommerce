@@ -7,8 +7,9 @@ using Core.Security.Constants;
 using ECommerce.Application.Features.Products.Commands.Create;
 using ECommerce.Application.Services.Repositories;
 using MediatR;
+using Nest;
 namespace ECommerce.Application.Features.Products.Commands.Delete;
-public class ProductDeleteCommand : IRequest<string>,
+public class ProductDeleteCommand : MediatR.IRequest<string>,
     ICacheRemoverRequest,
     ILoggableRequest,
     ISecuredRequest,

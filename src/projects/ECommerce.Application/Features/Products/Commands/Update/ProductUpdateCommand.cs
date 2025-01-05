@@ -5,6 +5,7 @@ using Core.CrossCuttingConcerns.Exceptions.ExceptionTypes;
 using ECommerce.Application.Services.Repositories;
 using ECommerce.Domain.Entities;
 using MediatR;
+using Nest;
 namespace ECommerce.Application.Features.Products.Commands.Update;
 public class ProductUpdateCommand : MediatR.IRequest<ProductUpdateResponseDto>, ITransactionalRequest, ICacheRemoverRequest
 // ,ISecuredRequest 

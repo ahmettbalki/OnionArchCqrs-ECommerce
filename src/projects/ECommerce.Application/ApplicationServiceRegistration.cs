@@ -4,6 +4,7 @@ using Core.Application.Pipelines.Caching;
 using Core.Application.Pipelines.Logging;
 using Core.Application.Pipelines.Login;
 using Core.Application.Pipelines.Performance;
+using Core.Application.Pipelines.Transaction;
 using Core.Application.Pipelines.Validation;
 using Core.CrossCuttingConcerns.Serilog.Loggers;
 using ECommerce.Application.Features.Auth.Rules;
@@ -43,6 +44,7 @@ public static class ApplicationServiceRegistration
             con.AddOpenBehavior(typeof(LoggingBehavior<,>));
             con.AddOpenBehavior(typeof(CachingBehavior<,>));
             con.AddOpenBehavior(typeof(CacheRemovingBehavior<,>));
+            con.AddOpenBehavior(typeof(TransactionScopeBehavior<,>));
         }); 
         return services;
     }
